@@ -1,14 +1,15 @@
-#  Medidata Django App
+#  DEMO Version - Universal Electronic Medical Report System( Django )
 
-#  Install Database
+#  How to set up this application
+##  Set up the Database
 
-You can do following this [link](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
+You can reference the following this [link](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
 
 **Step 1:** Install PostgreSQL
 
 **Step 2:** Create user and database on PostgreSQL
 
-#  How to Setup Django App
+##  Install necessary packages
 
 **Step 1:** git clone this repo
 
@@ -22,9 +23,9 @@ You can do following this [link](https://www.digitalocean.com/community/tutorial
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'medi',
-        'USER': 'medi',
-        'PASSWORD': 'medi',
+        'NAME': '<DB Name>',
+        'USER': '<DB Username>',
+        'PASSWORD': '<DB Password>',
         'HOST': '',
     }
 }
@@ -32,11 +33,11 @@ DATABASES = {
 
 **Step 5:** migrate database with `python manage_local.py migrate`
 
-#  Initial Data
+#  Import inital data into the database ( only one time )
 
 **psql -U [USER] [DATABASE] < initial_data/initial.sql**
 
 
-#  Run Django App
+#  Run the application
 
 **python manage_local.py runserver**
